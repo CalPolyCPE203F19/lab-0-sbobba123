@@ -8,35 +8,40 @@ public class Lab00
       double z = 9.8;
       
       //printing the variables
-      system.out.println('x:', x, 'y:', y, 'z:', z);
+      System.out.println("x: " + x + " y: " + y + " z: " + z);
       
       // a list (make an array in java)
-      int [] nums = [3,6,-1,2];
-      for(int i = 0, i < nums.length,  i ++){
-         system.out.println(nums[i]);
-      }
+      int [] nums = {3,6,-1,2};
+      for(int i = 0; i < nums.length;  i++)
+         System.out.println(nums[i]);
+      
       
       
       //call a function
-      int numFound = char_count(String y, char "l");
-      system.out.println("Found:" numFound);   
+      String word= "apple";
+      char p = 'p';
+      int numFound = char_count(word, p);
+      System.out.println("Found: " + numFound);   
       
       
       
       // a counting for loop
-      for(int i = 0, i < 11, i ++){
-         system.out.print(i, end = " ");
+      int end = 11;
+      for(int i = 0; i < end; i ++){
+         System.out.print(i + " " );
       }
+      System.out.println(" ");
       
-      
-      public int char_count( String s, char c){
+    }   
+
+     public static int char_count(String s, char c){
          int count = 0;
-         for(int ch = 0, ch < s.length, ch ++){
-            if(ch.equals(c)){
-               count ++;
+         for(int ch = 0; ch < s.length(); ch++){
+            if(s.charAt(ch) == c){
+               count++;
             }
          }
-         return count
+         return count;
       }       
    }
-}
+
